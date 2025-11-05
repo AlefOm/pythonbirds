@@ -29,3 +29,24 @@ if __name__ == '__main__':
     # Eh possivel acessar os atributos criados atraves do proprio objeto:
     print(p.nome)
     print(p.idade)
+
+
+    # Atributos dinamicos sao atributos passados sem ue antes tenham sido criados. Esse tipo de operacao
+    # afeta apenas o objeto a que diz respeito, e nao cria o mesmo atributo para nenhuma dos
+    # demais participantes da classe.
+
+    luciano.sobrenome = 'Ramalho'
+    print(luciano.sobrenome)
+
+    # Para conferir todos os atributos de instancia, tanto os comuns (criados com __init__)
+    # quanto os dinâmincos, existe o atributo especial '__dict__'.
+
+    print(luciano.__dict__)
+
+    # Podemos também excluir dinamicamente qualquer dos tipos de atributo.
+    # Para isso, usamos a palavra reservada 'del'.
+
+    del luciano.filhos
+
+
+
